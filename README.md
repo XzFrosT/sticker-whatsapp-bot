@@ -1,0 +1,1 @@
+Whatsapp bot untuk mengubah gambar menjadi sticker

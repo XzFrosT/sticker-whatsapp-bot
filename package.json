@@ -1,0 +1,23 @@
+{
+  "name": "sticker-whatsapp-bot",
+  "version": "1.0.0",
+  "description": "a bot to turn an image into sticker on whatsapp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xzfrost/sticker-whatsapp-bot.git"
+  },
+  "author": "ihsan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xzfrost/sticker-whatsapp-bot/issues"
+  },
+  "homepage": "https://github.com/xzfrost/sticker-whatsapp-bot#readme",
+  "dependencies": {
+    "qrcode-terminal": "^0.12.0",
+    "whatsapp-web.js": "^1.23.0"
+  }
+}
