@@ -34,7 +34,7 @@ client.on('message_create', async (message) => {
 	switch (command_name) {
 		case "sticker":
 			// check if the user provides an image or not, if not then warn them
-			if (!message.hasMedia) return message.reply(`Perintah untuk mengubah gambar menjadi sticker.\n\nCara menggunakannya:\n${prefix}{command_name} (nama sticker) (nama pembuat sticker)\n*contoh:* ${prefix}${command_name} apaaja akudeh\n\nSertakan gambar yang ingin diubah menjadi sticker dan jangan menggunakan spasi dibagian nama sticker dan pembuat sticker!`);
+			if (!message.hasMedia) return message.reply(`Perintah untuk mengubah gambar menjadi sticker.\n\nCara menggunakannya:\n${prefix}${command_name} (nama sticker) (nama pembuat sticker)\n*contoh:* ${prefix}${command_name} apaaja akudeh\n\nSertakan gambar yang ingin diubah menjadi sticker dan jangan menggunakan spasi dibagian nama sticker dan pembuat sticker!`);
 			const download_media = await message.downloadMedia(); // download the image
 			
 			// now check the media type, only accept image format like jpeg or png
