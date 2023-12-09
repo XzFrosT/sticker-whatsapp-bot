@@ -5,7 +5,7 @@
 const qrcode = require('qrcode-terminal');
 const { Client, LocalAuth } = require('whatsapp-web.js');
 
-const prefix = "!"; // command prefix e.g !stiker
+const prefix = "!"; // command prefix e.g !sticker
 const client = new Client({  // create client object
 	authStrategy: new LocalAuth(),
 	puppeteer: {headless: true, args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-extensions']}
@@ -34,7 +34,7 @@ client.on('message_create', async (message) => {
 	switch (command_name) {
 		case "sticker":
 			// check if the user provides an image or not, if not then warn them
-			if (!message.hasMedia) return message.reply("Perintah untuk mengubah gambar menjadi stiker.\n\nCara menggunakannya:\n!stiker (nama stiker) (nama pembuat stiker)\n*contoh:* !stiker apaaja akudeh\n\nSertakan gambar yang ingin diubah menjadi stiker dan jangan menggunakan spasi dibagian nama stiker dan pembuat stiker!");
+			if (!message.hasMedia) return message.reply("Perintah untuk mengubah gambar menjadi sticker.\n\nCara menggunakannya:\n${prefix}{command_name} (nama sticker) (nama pembuat sticker)\n*contoh:* ${prefix}${command_name} apaaja akudeh\n\nSertakan gambar yang ingin diubah menjadi sticker dan jangan menggunakan spasi dibagian nama sticker dan pembuat sticker!");
 			const download_media = await message.downloadMedia(); // download the image
 			
 			// now check the media type, only accept image format like jpeg or png
